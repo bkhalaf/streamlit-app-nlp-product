@@ -2,11 +2,17 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from transformers import pipeline, AutoModelWithLMHead, AutoTokenizer
-#import torch 
+import torch 
+import boto3
+
+s3 = boto3.resource('s3')
+s3_object = s3.Bucket('nlp-gpt-models').Object('mod_v1.pth').get()
+
 
 
 st.title('Patent Context Generation Tool-Development Stage..')
-model_path = 'https://nlp-gpt-models.s3.amazonaws.com/mod_v1.pth'
+model_path = s3_object
+#model_path = 'https://nlp-gpt-models.s3.amazonaws.com/mod_v1.pth'
 #model_path = 'https://drive.google.com/file/d/1-Dqk6fZzDiFKTqnnQ2yqW48uJk-CPqrB/view?usp=sharing'
 propmt_title = st.text_input('Enter Your Title....', 'Biology...')
 
