@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from transformers import pipeline, AutoModelWithLMHead, AutoTokenizer
-import torch 
+#import torch 
 
 
 st.title('Patent Context Generation Tool-Development Stage..')
