@@ -1,8 +1,9 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-#from transformers import pipeline, AutoModelWithLMHead, AutoTokenizer
-#import torch 
+import transformers
+from transformers import pipeline, AutoModelWithLMHead, AutoTokenizer
+import torch 
 #import boto3
 
 #s3 = boto3.resource('s3')
