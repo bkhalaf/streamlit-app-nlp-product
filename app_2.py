@@ -5,8 +5,8 @@ import numpy as np
 #import torch 
 #import boto3
 
-s3 = boto3.resource('s3')
-s3_object = s3.Bucket('nlp-gpt-models').Object('mod_v1.pth').get()
+#s3 = boto3.resource('s3')
+#s3_object = s3.Bucket('nlp-gpt-models').Object('mod_v1.pth').get()
 
 
 
