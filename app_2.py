@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from transformers import pipeline, AutoModelWithLMHead, AutoTokenizer
-import torch 
-import boto3
+#from transformers import pipeline, AutoModelWithLMHead, AutoTokenizer
+#import torch 
+#import boto3
 
 s3 = boto3.resource('s3')
 s3_object = s3.Bucket('nlp-gpt-models').Object('mod_v1.pth').get()
